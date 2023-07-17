@@ -1,0 +1,6 @@
+runtime: php74
+service: admin
+env: flex
+
+runtime_config:
+    document_root: .
