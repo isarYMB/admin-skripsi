@@ -1,7 +1,4 @@
 <?php
-require_once "vendor/autoload.php";
-
-use Google\Cloud\Storage\StorageClient;
 
 session_start();
 require 'dbconnect.php';
@@ -434,7 +431,7 @@ if (isset($_POST["tambah"])) {
           $prosesUpload = move_uploaded_file($lokasiTmp, $lokasiBaru);
         }
 
-        $url = 'https://voltaic-nebula-393108.et.r.appspot.com/' . 'Image' . '/' . $merek . '/' . $filename;
+        $url = 'http://34.101.203.34/' . 'Image' . '/' . $merek . '/' . $filename;
         move_uploaded_file($_FILES['gambarutama']['tmp_name'], $temp . '/' . $filename);
         mysqli_query($conn, "INSERT INTO produk (ID, MEREK, BRAND, DESKRIPSI, HARGA, DISKON, GAMBAR, lensUUID)
         VALUES (NULL,'$merek','$brand','$deskripsi','$harga','$diskon','$url','$lensUUID')");
