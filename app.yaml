@@ -1,6 +1,11 @@
 runtime: php74
 service: admin
-env: flex
 
-runtime_config:
-    document_root: .
+handlers:
+- url: /([^/]+\.php)
+  script: auto
+
+- url: /.*
+  script: auto
+  login: required
+  secure: always

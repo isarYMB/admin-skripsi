@@ -1,0 +1,17 @@
+{
+    "name": "yischard/admin_ecommerce",
+    "autoload": {
+        "psr-4": {
+            "Yischard\\AdminEcommerce\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Yischard Meynardi Borean",
+            "email": "yizchard0897@gmail.com"
+        }
+    ],
+    "require": {
+        "google/cloud-storage": "^1.33"
+    }
+}
